@@ -1,0 +1,569 @@
+.hiring-decisions-page {
+  width: 100%;
+}
+
+.hiring-decisions-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 30px;
+  border-radius: var(--border-radius-large);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-deep-teal)
+  );
+  color: var(--color-white);
+  box-shadow: var(--shadow-medium);
+}
+
+.hiring-decisions-heading > div > span {
+  color: var(--color-light);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hiring-decisions-heading h2 {
+  margin: 8px 0;
+  font-size: 30px;
+}
+
+.hiring-decisions-heading p {
+  max-width: 700px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hiring-decisions-heading button {
+  flex-shrink: 0;
+  padding: 12px 18px;
+  border: none;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+  color: var(--color-deep-teal);
+  font-weight: 800;
+}
+
+.hiring-decisions-message {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: var(--border-radius-small);
+  font-weight: 700;
+}
+
+.hiring-decisions-message.success {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.hiring-decisions-message.error {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.hiring-decisions-summary {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.hiring-decisions-summary article {
+  padding: 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.hiring-decisions-summary span,
+.hiring-decisions-summary strong {
+  display: block;
+}
+
+.hiring-decisions-summary span {
+  color: var(--color-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.hiring-decisions-summary strong {
+  margin-top: 8px;
+  color: var(--color-dark);
+  font-size: 25px;
+}
+
+.hiring-decisions-filters {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) 220px 240px;
+  gap: 18px;
+  margin-top: 22px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.hiring-decisions-filters > div {
+  display: grid;
+  gap: 8px;
+}
+
+.hiring-decisions-filters label {
+  color: var(--color-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.hiring-decisions-filters input,
+.hiring-decisions-filters select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  outline: none;
+}
+
+.hiring-decisions-filters input:focus,
+.hiring-decisions-filters select:focus {
+  border-color: var(--color-primary);
+}
+
+.hiring-decisions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 22px;
+}
+
+.hiring-decision-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.hiring-decision-card-header {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+}
+
+.hiring-decision-avatar {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-deep-teal);
+  color: var(--color-white);
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.hiring-decision-candidate-info h3 {
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.hiring-decision-candidate-info p {
+  margin: 5px 0;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.hiring-decision-candidate-info span {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hiring-decision-status {
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.hiring-decision-status.pending,
+.hiring-decision-status.under-review {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+
+.hiring-decision-status.shortlisted {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.hiring-decision-status.selected {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.hiring-decision-status.rejected {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.hiring-decision-score-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px 20px;
+  background-color: var(--color-background);
+}
+
+.hiring-decision-overall-score,
+.hiring-decision-ai-score {
+  padding: 14px;
+  border-radius: var(--border-radius-small);
+  text-align: center;
+}
+
+.hiring-decision-overall-score span,
+.hiring-decision-overall-score strong,
+.hiring-decision-ai-score span,
+.hiring-decision-ai-score strong {
+  display: block;
+}
+
+.hiring-decision-overall-score span,
+.hiring-decision-ai-score span {
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hiring-decision-overall-score strong,
+.hiring-decision-ai-score strong {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.hiring-decision-overall-score.excellent {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.hiring-decision-overall-score.good {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.hiring-decision-overall-score.average {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+
+.hiring-decision-overall-score.low {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.hiring-decision-ai-score {
+  background-color: var(--color-white);
+  color: var(--color-deep-teal);
+}
+
+.hiring-decision-scores {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  padding: 18px 20px 0;
+}
+
+.hiring-decision-scores article {
+  padding: 10px 7px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  text-align: center;
+}
+
+.hiring-decision-scores span,
+.hiring-decision-scores strong {
+  display: block;
+}
+
+.hiring-decision-scores span {
+  color: var(--color-muted);
+  font-size: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hiring-decision-scores strong {
+  margin-top: 5px;
+  color: var(--color-dark);
+  font-size: 12px;
+}
+
+.hiring-decision-recommendation,
+.hiring-decision-feedback {
+  margin: 16px 20px 0;
+  padding: 14px;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+}
+
+.hiring-decision-recommendation span,
+.hiring-decision-feedback span {
+  color: var(--color-muted);
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hiring-decision-recommendation strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--color-primary);
+}
+
+.hiring-decision-feedback p {
+  margin: 6px 0 0;
+  color: var(--color-text);
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.hiring-decision-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px 20px 0;
+}
+
+.hiring-decision-meta span {
+  color: var(--color-muted);
+  font-size: 10px;
+}
+
+.hiring-decision-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  padding: 20px;
+}
+
+.hiring-decision-actions button,
+.hiring-decision-modal-actions button {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.hiring-decision-actions button.primary,
+.hiring-decision-modal-actions button.primary {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.hiring-decisions-state {
+  margin-top: 22px;
+  padding: 45px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.hiring-decisions-state h2 {
+  margin-top: 0;
+  color: var(--color-dark);
+}
+
+.hiring-decision-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(16, 46, 60, 0.72);
+}
+
+.hiring-decision-modal {
+  width: min(780px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: var(--border-radius-large);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-medium);
+}
+
+.hiring-decision-modal-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hiring-decision-modal-header span {
+  color: var(--color-primary);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hiring-decision-modal-header h2 {
+  margin: 6px 0;
+  color: var(--color-dark);
+}
+
+.hiring-decision-modal-header p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.hiring-decision-modal-header > button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-background);
+  color: var(--color-dark);
+  font-size: 24px;
+}
+
+.hiring-decision-modal-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  padding: 24px;
+}
+
+.hiring-decision-modal-summary article,
+.hiring-decision-modal-scores article {
+  padding: 14px;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+}
+
+.hiring-decision-modal-summary span,
+.hiring-decision-modal-summary strong,
+.hiring-decision-modal-scores span,
+.hiring-decision-modal-scores strong {
+  display: block;
+}
+
+.hiring-decision-modal-summary span,
+.hiring-decision-modal-scores span {
+  color: var(--color-muted);
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hiring-decision-modal-summary strong,
+.hiring-decision-modal-scores strong {
+  margin-top: 5px;
+  color: var(--color-dark);
+}
+
+.hiring-decision-modal-scores {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0 24px 24px;
+}
+
+.hiring-decision-modal-section {
+  padding: 0 24px 20px;
+}
+
+.hiring-decision-modal-section h3 {
+  margin: 0 0 8px;
+  color: var(--color-dark);
+}
+
+.hiring-decision-modal-section p {
+  margin: 5px 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.hiring-decision-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 24px 24px;
+}
+
+@media (max-width: 1200px) {
+  .hiring-decisions-summary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hiring-decision-scores {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .hiring-decisions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hiring-decisions-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .hiring-decision-modal-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hiring-decision-modal-scores {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .hiring-decisions-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hiring-decisions-heading button {
+    align-self: flex-start;
+  }
+
+  .hiring-decisions-summary,
+  .hiring-decision-score-section,
+  .hiring-decision-scores,
+  .hiring-decision-actions,
+  .hiring-decision-modal-summary,
+  .hiring-decision-modal-scores {
+    grid-template-columns: 1fr;
+  }
+
+  .hiring-decision-card-header {
+    grid-template-columns: 52px minmax(0, 1fr);
+  }
+
+  .hiring-decision-status {
+    grid-column: 1 / -1;
+    justify-self: flex-start;
+  }
+}
