@@ -1,0 +1,385 @@
+.recruiter-communication-page {
+  width: 100%;
+}
+
+.communication-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 30px;
+  border-radius: var(--border-radius-large);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-deep-teal)
+  );
+  color: var(--color-white);
+  box-shadow: var(--shadow-medium);
+}
+
+.communication-page-header > div > span {
+  color: var(--color-light);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.communication-page-header h2 {
+  margin: 8px 0;
+  font-size: 30px;
+}
+
+.communication-page-header p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.communication-page-header button {
+  flex-shrink: 0;
+  padding: 12px 18px;
+  border: none;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+  color: var(--color-deep-teal);
+  font-weight: 800;
+}
+
+.communication-page-message {
+  margin-top: 22px;
+  padding: 14px 16px;
+  border-radius: var(--border-radius-small);
+  font-weight: 600;
+}
+
+.communication-page-message.success {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.communication-page-message.error {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.communication-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.5fr);
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.communication-form-card,
+.communication-summary-panel,
+.sent-messages-section {
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.communication-section-heading h3,
+.communication-summary-panel h3 {
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.communication-section-heading p {
+  margin: 6px 0 0;
+  color: var(--color-muted);
+}
+
+.communication-form {
+  display: grid;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.communication-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+.communication-form-group input,
+.communication-form-group select,
+.communication-form-group textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  outline: none;
+}
+
+.communication-form-group textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.communication-form-group input:focus,
+.communication-form-group select:focus,
+.communication-form-group textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(26, 153, 143, 0.14);
+}
+
+.communication-form-group small {
+  display: block;
+  margin-top: 6px;
+  color: var(--color-muted);
+  text-align: right;
+}
+
+.communication-template-section {
+  padding: 15px;
+  border-radius: var(--border-radius-small);
+  background-color: rgba(26, 153, 143, 0.07);
+}
+
+.communication-template-section > span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.communication-template-section > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.communication-template-section button {
+  padding: 8px 11px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-small);
+  background-color: transparent;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.send-candidate-message-button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 800;
+}
+
+.send-candidate-message-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.communication-summary-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.communication-summary-grid article {
+  padding: 18px;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+}
+
+.communication-summary-grid span,
+.communication-summary-grid strong {
+  display: block;
+}
+
+.communication-summary-grid span {
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.communication-summary-grid strong {
+  margin-top: 8px;
+  color: var(--color-dark);
+  font-size: 26px;
+}
+
+.sent-messages-section {
+  margin-top: 24px;
+}
+
+.communication-filter-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.communication-filter-card input,
+.communication-filter-card select {
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.sent-message-list {
+  display: grid;
+  gap: 16px;
+}
+
+.sent-message-card {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-background);
+}
+
+.sent-message-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.sent-message-card-header > div > span {
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.sent-message-card-header h3 {
+  margin: 6px 0;
+  color: var(--color-dark);
+}
+
+.sent-message-card-header p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.message-read-badge {
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.message-read-badge.read {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.message-read-badge.unread {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+
+.sent-message-information {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.sent-message-information div {
+  padding: 12px;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+}
+
+.sent-message-information span,
+.sent-message-information strong {
+  display: block;
+}
+
+.sent-message-information span {
+  margin-bottom: 5px;
+  color: var(--color-muted);
+  font-size: 10px;
+}
+
+.sent-message-information strong {
+  color: var(--color-dark);
+  overflow-wrap: anywhere;
+}
+
+.sent-message-body {
+  margin-top: 16px;
+  padding: 15px;
+  border-radius: var(--border-radius-small);
+  background-color: rgba(26, 153, 143, 0.07);
+}
+
+.sent-message-body span {
+  color: var(--color-dark);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.sent-message-body p {
+  margin: 8px 0 0;
+  color: var(--color-muted);
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+
+.communication-state-card {
+  padding: 40px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  text-align: center;
+}
+
+.communication-state-card h2,
+.communication-state-card h3 {
+  color: var(--color-dark);
+}
+
+.communication-state-card p {
+  color: var(--color-muted);
+}
+
+@media (max-width: 1000px) {
+  .communication-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .communication-summary-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .communication-page-header,
+  .sent-message-card-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .communication-filter-card,
+  .sent-message-information,
+  .communication-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .communication-page-header button {
+    align-self: flex-start;
+  }
+
+  .communication-template-section > div {
+    flex-direction: column;
+  }
+
+  .communication-template-section button {
+    width: 100%;
+  }
+}
