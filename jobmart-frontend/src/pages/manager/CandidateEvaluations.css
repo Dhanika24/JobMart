@@ -1,0 +1,702 @@
+.candidate-evaluations-page {
+  width: 100%;
+}
+
+.evaluation-page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 30px;
+  border-radius: var(--border-radius-large);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-deep-teal)
+  );
+  color: var(--color-white);
+  box-shadow: var(--shadow-medium);
+}
+
+.evaluation-page-heading > div > span {
+  color: var(--color-light);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.evaluation-page-heading h2 {
+  margin: 8px 0;
+  font-size: 30px;
+}
+
+.evaluation-page-heading p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.evaluation-page-heading button {
+  flex-shrink: 0;
+  padding: 12px 18px;
+  border: none;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+  color: var(--color-deep-teal);
+  font-weight: 800;
+}
+
+.evaluation-message {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: var(--border-radius-small);
+  font-weight: 700;
+}
+
+.evaluation-message.success {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.evaluation-message.error {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.evaluation-summary-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.evaluation-summary-grid article {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.evaluation-summary-grid span,
+.evaluation-summary-grid strong {
+  display: block;
+}
+
+.evaluation-summary-grid span {
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.evaluation-summary-grid strong {
+  margin-top: 8px;
+  color: var(--color-dark);
+  font-size: 28px;
+}
+
+.evaluation-workspace {
+  display: grid;
+  grid-template-columns:
+    340px minmax(0, 1fr);
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.evaluation-candidate-panel,
+.evaluation-form-panel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.evaluation-candidate-panel {
+  align-self: start;
+  overflow: hidden;
+}
+
+.evaluation-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.evaluation-panel-heading h3 {
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.evaluation-panel-heading p {
+  margin: 5px 0 0;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.evaluation-panel-heading > span {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.evaluation-candidate-search {
+  width: calc(100% - 32px);
+  margin: 16px;
+  padding: 11px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  outline: none;
+}
+
+.evaluation-candidate-search:focus {
+  border-color: var(--color-primary);
+}
+
+.evaluation-candidate-list {
+  max-height: 720px;
+  overflow-y: auto;
+  padding: 0 12px 14px;
+}
+
+.evaluation-candidate-item {
+  display: grid;
+  width: 100%;
+  grid-template-columns:
+    42px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 8px;
+  padding: 12px;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-small);
+  background-color: transparent;
+  text-align: left;
+}
+
+.evaluation-candidate-item:hover {
+  background-color: var(--color-background);
+}
+
+.evaluation-candidate-item.active {
+  border-color: var(--color-primary);
+  background-color: rgba(26, 153, 143, 0.08);
+}
+
+.evaluation-candidate-avatar {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-deep-teal);
+  color: var(--color-white);
+  font-weight: 800;
+}
+
+.evaluation-candidate-information strong,
+.evaluation-candidate-information span,
+.evaluation-candidate-information small {
+  display: block;
+}
+
+.evaluation-candidate-information strong {
+  overflow: hidden;
+  color: var(--color-dark);
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.evaluation-candidate-information span {
+  overflow: hidden;
+  margin-top: 3px;
+  color: var(--color-muted);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.evaluation-candidate-information small {
+  margin-top: 4px;
+  color: var(--color-primary);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.evaluation-candidate-result {
+  text-align: right;
+}
+
+.evaluation-candidate-result strong,
+.evaluation-candidate-result span {
+  display: block;
+}
+
+.evaluation-candidate-result strong {
+  color: var(--color-dark);
+  font-size: 12px;
+}
+
+.evaluation-candidate-result span {
+  margin-top: 3px;
+  color: var(--color-muted);
+  font-size: 9px;
+}
+
+.evaluation-candidate-result .not-evaluated {
+  padding: 5px 7px;
+  border-radius: 999px;
+  background-color: #fffbeb;
+  color: #b45309;
+  font-weight: 800;
+}
+
+.evaluation-empty-list {
+  padding: 35px 15px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.evaluation-form-panel {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.evaluation-select-state {
+  display: flex;
+  min-height: 500px;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.evaluation-select-state span {
+  display: flex;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 18px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.evaluation-select-state h2 {
+  color: var(--color-dark);
+}
+
+.evaluation-select-state p {
+  max-width: 420px;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.evaluation-selected-candidate {
+  padding: 24px;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-background);
+}
+
+.evaluation-selected-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.evaluation-large-avatar {
+  display: flex;
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-deep-teal);
+  color: var(--color-white);
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.evaluation-selected-profile span {
+  color: var(--color-primary);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.evaluation-selected-profile h2 {
+  margin: 4px 0;
+  color: var(--color-dark);
+  font-size: 21px;
+}
+
+.evaluation-selected-profile p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.evaluation-selected-details {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.evaluation-selected-details article {
+  padding: 13px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+}
+
+.evaluation-selected-details span,
+.evaluation-selected-details strong {
+  display: block;
+}
+
+.evaluation-selected-details span {
+  color: var(--color-muted);
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.evaluation-selected-details strong {
+  margin-top: 5px;
+  color: var(--color-dark);
+  font-size: 12px;
+}
+
+.evaluation-candidate-skills {
+  margin-top: 14px;
+  padding: 13px;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+}
+
+.evaluation-candidate-skills span {
+  color: var(--color-muted);
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.evaluation-candidate-skills p {
+  margin: 5px 0 0;
+  color: var(--color-text);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.evaluation-form {
+  padding: 24px;
+}
+
+.evaluation-score-section,
+.evaluation-feedback-section {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+}
+
+.evaluation-feedback-section {
+  margin-top: 18px;
+}
+
+.evaluation-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.evaluation-section-heading h3 {
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.evaluation-section-heading p {
+  margin: 5px 0 0;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.evaluation-overall-score {
+  min-width: 118px;
+  padding: 10px 13px;
+  border-radius: var(--border-radius-small);
+  text-align: center;
+}
+
+.evaluation-overall-score span,
+.evaluation-overall-score strong {
+  display: block;
+}
+
+.evaluation-overall-score span {
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.evaluation-overall-score strong {
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+.evaluation-overall-score.excellent {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.evaluation-overall-score.good {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.evaluation-overall-score.average {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+
+.evaluation-overall-score.low {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.evaluation-score-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.evaluation-score-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.evaluation-score-field label {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--color-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.evaluation-score-field > div {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) 65px;
+  align-items: center;
+  gap: 12px;
+}
+
+.evaluation-score-field input[type="range"] {
+  width: 100%;
+  accent-color: var(--color-primary);
+}
+
+.evaluation-score-field input[type="number"] {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  color: var(--color-dark);
+  text-align: center;
+}
+
+.evaluation-form-field {
+  display: grid;
+  gap: 8px;
+}
+
+.evaluation-form-field label {
+  color: var(--color-dark);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.evaluation-form-field textarea,
+.evaluation-form-field select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  font: inherit;
+  outline: none;
+}
+
+.evaluation-form-field textarea {
+  resize: vertical;
+}
+
+.evaluation-form-field textarea:focus,
+.evaluation-form-field select:focus {
+  border-color: var(--color-primary);
+}
+
+.evaluation-form-field small {
+  color: var(--color-muted);
+  text-align: right;
+}
+
+.evaluation-form-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.evaluation-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.evaluation-form-actions > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.evaluation-form-actions button {
+  padding: 11px 16px;
+  border-radius: var(--border-radius-small);
+  font-weight: 800;
+}
+
+.evaluation-secondary-button {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+
+.evaluation-delete-button {
+  border: 1px solid #dc2626;
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.evaluation-save-button {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.evaluation-form-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.evaluation-record-information {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 13px;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+}
+
+.evaluation-record-information span {
+  color: var(--color-muted);
+  font-size: 10px;
+}
+
+.evaluation-loading-state {
+  padding: 45px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.evaluation-loading-state h2 {
+  color: var(--color-dark);
+}
+
+@media (max-width: 1150px) {
+  .evaluation-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .evaluation-candidate-list {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 850px) {
+  .evaluation-summary-grid,
+  .evaluation-selected-details {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .evaluation-page-heading,
+  .evaluation-section-heading,
+  .evaluation-form-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .evaluation-page-heading button,
+  .evaluation-save-button {
+    align-self: flex-start;
+  }
+
+  .evaluation-summary-grid,
+  .evaluation-selected-details,
+  .evaluation-score-grid,
+  .evaluation-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evaluation-score-field.full-width {
+    grid-column: auto;
+  }
+
+  .evaluation-candidate-item {
+    grid-template-columns:
+      42px minmax(0, 1fr);
+  }
+
+  .evaluation-candidate-result {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .evaluation-candidate-result strong,
+  .evaluation-candidate-result span {
+    display: inline-block;
+    margin-right: 6px;
+  }
+}
