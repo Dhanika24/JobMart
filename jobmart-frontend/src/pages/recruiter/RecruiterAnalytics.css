@@ -1,0 +1,1072 @@
+.recruiter-analytics-page {
+  width: 100%;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.analytics-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 30px;
+  border-radius: var(--border-radius-large);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-deep-teal)
+  );
+  color: var(--color-white);
+  box-shadow: var(--shadow-medium);
+}
+
+.analytics-page-header > div > span {
+  color: var(--color-light);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.analytics-page-header h2 {
+  margin: 8px 0;
+  color: var(--color-white);
+  font-size: 30px;
+}
+
+.analytics-page-header p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.analytics-page-header button {
+  flex-shrink: 0;
+  padding: 12px 18px;
+  border: none;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+  color: var(--color-deep-teal);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.analytics-page-header button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(5, 45, 53, 0.2);
+}
+
+.analytics-page-header button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* =========================================
+   MESSAGES
+========================================= */
+
+.analytics-page-message {
+  margin-top: 22px;
+  padding: 14px 16px;
+  border-radius: var(--border-radius-small);
+  font-weight: 600;
+}
+
+.analytics-page-message.success {
+  border: 1px solid rgba(21, 128, 61, 0.2);
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.analytics-page-message.error {
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+/* =========================================
+   MAIN SUMMARY CARDS
+========================================= */
+
+.analytics-main-summary {
+  display: grid;
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.analytics-main-summary article {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.analytics-main-summary span,
+.analytics-main-summary strong,
+.analytics-main-summary small {
+  display: block;
+}
+
+.analytics-main-summary span {
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.analytics-main-summary strong {
+  margin-top: 9px;
+  color: var(--color-dark);
+  font-size: 28px;
+}
+
+.analytics-main-summary small {
+  margin-top: 6px;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+/* =========================================
+   PERFORMANCE RATE CARDS
+========================================= */
+
+.analytics-rate-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.analytics-rate-grid-four {
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+}
+
+.analytics-rate-grid article {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.analytics-rate-grid article > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.analytics-rate-grid span {
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+.analytics-rate-grid strong {
+  color: var(--color-primary);
+  font-size: 24px;
+}
+
+.analytics-danger-rate strong {
+  color: #c94b4b;
+}
+
+.analytics-progress-track,
+.analytics-bar-track {
+  height: 9px;
+  overflow: hidden;
+  margin-top: 14px;
+  border-radius: 999px;
+  background-color: var(--color-background);
+}
+
+.analytics-progress-track > span,
+.analytics-bar-track > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  transition: width 0.3s ease;
+}
+
+.analytics-danger-rate
+  .analytics-progress-track
+  > span {
+  background: linear-gradient(
+    90deg,
+    #df6a6a,
+    #c94b4b
+  );
+}
+
+/* =========================================
+   COMMON GRID AND SECTION CARDS
+========================================= */
+
+.analytics-two-column-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.analytics-section-card {
+  margin-top: 24px;
+  padding: 23px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.analytics-two-column-grid
+  .analytics-section-card {
+  margin-top: 0;
+}
+
+.analytics-section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.analytics-section-heading h3 {
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.analytics-section-heading p {
+  margin: 6px 0 0;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.analytics-section-heading > strong {
+  flex-shrink: 0;
+  color: var(--color-primary);
+  font-size: 25px;
+}
+
+/* =========================================
+   MONTHLY RECRUITMENT TREND
+========================================= */
+
+.monthly-trend-chart {
+  min-height: 300px;
+  display: grid;
+  grid-template-columns:
+    repeat(6, minmax(90px, 1fr));
+  align-items: end;
+  gap: 18px;
+  margin-top: 26px;
+  padding: 24px 12px 8px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.monthly-trend-column {
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.monthly-trend-bars {
+  width: 100%;
+  height: 210px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 8px;
+}
+
+.monthly-trend-bar {
+  position: relative;
+  width: 22px;
+  min-height: 0;
+  border-radius: 7px 7px 2px 2px;
+  transition:
+    height 0.3s ease,
+    transform 0.2s ease;
+}
+
+.monthly-trend-bar:hover {
+  transform: translateY(-3px);
+}
+
+.monthly-trend-bar span {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  color: var(--color-muted);
+  font-size: 10px;
+  font-weight: 800;
+  transform: translateX(-50%);
+}
+
+.monthly-trend-bar.applications {
+  background: linear-gradient(
+    180deg,
+    var(--color-primary),
+    var(--color-deep-teal)
+  );
+}
+
+.monthly-trend-bar.selected {
+  background: linear-gradient(
+    180deg,
+    #36b975,
+    #15803d
+  );
+}
+
+.monthly-trend-bar.rejected {
+  background: linear-gradient(
+    180deg,
+    #eb7777,
+    #c94b4b
+  );
+}
+
+.monthly-trend-column > strong {
+  margin-top: 13px;
+  color: var(--color-dark);
+  font-size: 11px;
+  text-align: center;
+}
+
+.monthly-trend-column > small {
+  margin-top: 5px;
+  color: var(--color-muted);
+  font-size: 9px;
+  text-align: center;
+}
+
+.monthly-trend-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 18px;
+  padding-top: 17px;
+  border-top: 1px solid var(--color-border);
+}
+
+.monthly-trend-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.monthly-trend-legend i {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+}
+
+.monthly-trend-legend i.applications {
+  background-color: var(--color-primary);
+}
+
+.monthly-trend-legend i.selected {
+  background-color: #15803d;
+}
+
+.monthly-trend-legend i.rejected {
+  background-color: #c94b4b;
+}
+
+/* =========================================
+   APPLICATION STATUS
+========================================= */
+
+.status-analytics-list {
+  display: grid;
+  gap: 17px;
+  margin-top: 22px;
+}
+
+.status-analytics-row > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.status-analytics-row span {
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+.status-analytics-row strong {
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+/* =========================================
+   JOB STATUS DISTRIBUTION
+========================================= */
+
+.job-status-analytics-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.job-status-analytics-list article {
+  display: grid;
+  gap: 10px;
+}
+
+.job-status-analytics-list
+  article
+  > div:first-child {
+  display: grid;
+  grid-template-columns:
+    12px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.job-status-analytics-list strong {
+  color: var(--color-dark);
+  font-size: 13px;
+}
+
+.job-status-analytics-list small {
+  color: var(--color-muted);
+  font-size: 11px;
+}
+
+.job-status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.job-status-indicator.open {
+  background-color: #15803d;
+}
+
+.job-status-indicator.closed {
+  background-color: #dc2626;
+}
+
+.job-status-indicator.expired {
+  background-color: #b45309;
+}
+
+.job-status-indicator.draft {
+  background-color: #6b7280;
+}
+
+.job-status-indicator.other,
+.job-status-indicator.unknown {
+  background-color: var(--color-primary);
+}
+
+.analytics-bar-track > span.open {
+  background: linear-gradient(
+    90deg,
+    #36b975,
+    #15803d
+  );
+}
+
+.analytics-bar-track > span.closed {
+  background: linear-gradient(
+    90deg,
+    #ef7a7a,
+    #dc2626
+  );
+}
+
+.analytics-bar-track > span.expired {
+  background: linear-gradient(
+    90deg,
+    #f0b853,
+    #b45309
+  );
+}
+
+.analytics-bar-track > span.draft {
+  background: linear-gradient(
+    90deg,
+    #9ca3af,
+    #6b7280
+  );
+}
+
+/* =========================================
+   INTERVIEW ANALYTICS
+========================================= */
+
+.interview-analytics-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  margin-top: 22px;
+}
+
+.interview-analytics-grid div {
+  padding: 17px;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+}
+
+.interview-analytics-grid span,
+.interview-analytics-grid strong {
+  display: block;
+}
+
+.interview-analytics-grid span {
+  color: var(--color-muted);
+  font-size: 11px;
+}
+
+.interview-analytics-grid strong {
+  margin-top: 7px;
+  color: var(--color-dark);
+  font-size: 23px;
+}
+
+.analytics-highlight-box {
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: var(--border-radius-small);
+  background-color: rgba(26, 153, 143, 0.08);
+}
+
+.analytics-highlight-box span,
+.analytics-highlight-box strong {
+  display: block;
+}
+
+.analytics-highlight-box span {
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.analytics-highlight-box strong {
+  margin-top: 7px;
+  color: var(--color-dark);
+  font-size: 27px;
+}
+
+.analytics-highlight-box p {
+  margin: 7px 0 0;
+  color: var(--color-muted);
+}
+
+/* =========================================
+   RECRUITMENT PERFORMANCE
+========================================= */
+
+.recruitment-performance-list {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.recruitment-performance-list > div {
+  min-height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+}
+
+.recruitment-performance-list span {
+  color: var(--color-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.recruitment-performance-list strong {
+  margin-top: 8px;
+  color: var(--color-dark);
+  font-size: 24px;
+}
+
+/* =========================================
+   TOP JOBS
+========================================= */
+
+.top-jobs-analytics-list {
+  display: grid;
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.top-jobs-analytics-list > article {
+  display: grid;
+  grid-template-columns: 55px minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+}
+
+.top-job-position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-deep-teal);
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.top-job-content {
+  min-width: 0;
+  padding: 17px;
+}
+
+.top-job-content > div:first-child {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.top-job-content h4 {
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.top-job-content p {
+  margin: 5px 0 0;
+  color: var(--color-muted);
+}
+
+.analytics-job-status {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background-color: var(--color-background);
+  color: var(--color-deep-teal);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.analytics-job-status.open {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.analytics-job-status.closed {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.analytics-job-status.expired {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+
+.analytics-job-status.draft {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.top-job-statistics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+/* =========================================
+   CANDIDATES AND INTERVIEWS
+========================================= */
+
+.analytics-candidate-list,
+.analytics-interview-list {
+  display: grid;
+  gap: 13px;
+  margin-top: 20px;
+}
+
+.analytics-candidate-list article {
+  display: grid;
+  grid-template-columns:
+    36px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+}
+
+.analytics-list-rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--color-deep-teal);
+  color: var(--color-white);
+  font-weight: 800;
+}
+
+.analytics-candidate-list h4,
+.analytics-interview-list h4 {
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.analytics-candidate-list p,
+.analytics-interview-list p {
+  margin: 4px 0;
+  color: var(--color-muted);
+}
+
+.analytics-candidate-list small,
+.analytics-interview-list small {
+  color: var(--color-muted);
+}
+
+.analytics-score-badge {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.analytics-score-badge.excellent {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.analytics-score-badge.good {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.analytics-score-badge.average {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+
+.analytics-score-badge.low {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.analytics-interview-list article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+}
+
+.analytics-interview-list > article > strong {
+  color: var(--color-primary);
+  font-size: 12px;
+  text-align: right;
+}
+
+/* =========================================
+   RECENT APPLICATIONS TABLE
+========================================= */
+
+.analytics-table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.analytics-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.analytics-table th,
+.analytics-table td {
+  padding: 13px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.analytics-table th {
+  background-color: var(--color-background);
+  color: var(--color-muted);
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.analytics-table td {
+  color: var(--color-text);
+}
+
+.analytics-table tbody tr:hover {
+  background-color: rgba(26, 153, 143, 0.03);
+}
+
+.analytics-table td:first-child strong,
+.analytics-table td:first-child span {
+  display: block;
+}
+
+.analytics-table td:first-child strong {
+  color: var(--color-dark);
+}
+
+.analytics-table td:first-child span {
+  margin-top: 4px;
+  color: var(--color-muted);
+  font-size: 11px;
+}
+
+/* Application status badges */
+
+.analytics-table-status {
+  display: inline-flex;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background-color: var(--color-background);
+  color: var(--color-deep-teal);
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.analytics-table-status.pending {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+
+.analytics-table-status.under-review {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+.analytics-table-status.shortlisted {
+  background-color: #ecfeff;
+  color: #0e7490;
+}
+
+.analytics-table-status.selected {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.analytics-table-status.rejected {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.analytics-table-status.interview-scheduled,
+.analytics-table-status.interview-completed {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+
+/* =========================================
+   EMPTY AND LOADING STATES
+========================================= */
+
+.analytics-empty-state,
+.analytics-state-card {
+  padding: 35px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.analytics-state-card {
+  border: 1px dashed var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+}
+
+.analytics-state-card h2 {
+  margin-top: 0;
+  color: var(--color-dark);
+}
+
+.analytics-state-card p {
+  margin-bottom: 0;
+}
+
+.analytics-generated-time {
+  margin: 20px 0 0;
+  color: var(--color-muted);
+  font-size: 12px;
+  text-align: right;
+}
+
+/* =========================================
+   RESPONSIVE — LARGE TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+  .analytics-main-summary {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .analytics-rate-grid-four {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .monthly-trend-chart {
+    grid-template-columns:
+      repeat(6, minmax(110px, 1fr));
+  }
+}
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .analytics-main-summary,
+  .analytics-rate-grid,
+  .analytics-two-column-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .analytics-page-header,
+  .analytics-section-heading,
+  .top-job-content > div:first-child {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .analytics-page-header {
+    padding: 24px 20px;
+  }
+
+  .analytics-page-header h2 {
+    font-size: 26px;
+  }
+
+  .analytics-page-header button {
+    width: 100%;
+    align-self: stretch;
+  }
+
+  .analytics-main-summary,
+  .analytics-rate-grid,
+  .analytics-rate-grid-four,
+  .analytics-two-column-grid,
+  .interview-analytics-grid,
+  .recruitment-performance-list {
+    grid-template-columns: 1fr;
+  }
+
+  .monthly-trend-chart {
+    justify-content: flex-start;
+  }
+
+  .monthly-trend-bars {
+    height: 180px;
+  }
+
+  .top-jobs-analytics-list > article {
+    grid-template-columns: 1fr;
+  }
+
+  .top-job-position {
+    padding: 10px;
+  }
+
+  .analytics-candidate-list article {
+    grid-template-columns:
+      36px minmax(0, 1fr);
+  }
+
+  .analytics-score-badge {
+    grid-column: 1 / -1;
+    justify-self: flex-start;
+  }
+
+  .analytics-interview-list article {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .analytics-interview-list
+    > article
+    > strong {
+    text-align: left;
+  }
+}
+
+/* =========================================
+   RESPONSIVE — SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .analytics-section-card {
+    padding: 18px;
+  }
+
+  .analytics-main-summary article,
+  .analytics-rate-grid article {
+    padding: 17px;
+  }
+
+  .analytics-main-summary strong {
+    font-size: 25px;
+  }
+
+  .monthly-trend-chart {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .monthly-trend-legend {
+    justify-content: flex-start;
+  }
+
+  .status-analytics-row > div:first-child {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
