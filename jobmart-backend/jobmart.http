@@ -1,0 +1,6 @@
+@jobmart_HostAddress = http://localhost:5072
+
+GET {{jobmart_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
