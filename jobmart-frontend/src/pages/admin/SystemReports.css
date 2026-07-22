@@ -1,0 +1,1073 @@
+.system-reports-page {
+  width: 100%;
+}
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.system-reports-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 30px;
+  border-radius: var(--border-radius-large);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-deep-teal)
+  );
+  color: var(--color-white);
+  box-shadow: var(--shadow-medium);
+}
+
+.system-reports-heading > div:first-child > span {
+  color: var(--color-light);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.system-reports-heading h2 {
+  margin: 8px 0;
+  color: var(--color-white);
+  font-size: 30px;
+}
+
+.system-reports-heading p {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.6;
+}
+
+.system-reports-heading-actions {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.system-reports-heading-actions button {
+  min-height: 44px;
+  padding: 11px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+  color: var(--color-deep-teal);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.system-reports-heading-actions button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(5, 45, 53, 0.2);
+}
+
+.system-reports-heading-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* =========================================
+   MESSAGES
+========================================= */
+
+.system-reports-message {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: var(--border-radius-small);
+  font-weight: 700;
+}
+
+.system-reports-message.success {
+  border: 1px solid rgba(21, 128, 61, 0.2);
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.system-reports-message.error {
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.system-reports-summary {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.system-reports-summary article {
+  min-width: 0;
+  padding: 21px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.system-reports-summary span,
+.system-reports-summary strong,
+.system-reports-summary small {
+  display: block;
+}
+
+.system-reports-summary span {
+  color: var(--color-muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.system-reports-summary strong {
+  margin-top: 8px;
+  color: var(--color-dark);
+  font-size: 30px;
+}
+
+.system-reports-summary small {
+  margin-top: 6px;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+/* =========================================
+   PERFORMANCE RATE CARDS
+========================================= */
+
+.system-performance-rate-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.system-performance-rate-grid article {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.system-performance-rate-grid article > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.system-performance-rate-grid span {
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.system-performance-rate-grid strong {
+  color: var(--color-primary);
+  font-size: 23px;
+}
+
+.system-performance-rate-grid article.danger strong {
+  color: #c94b4b;
+}
+
+.system-performance-track {
+  height: 9px;
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 999px;
+  background-color: var(--color-background);
+}
+
+.system-performance-track > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  transition: width 0.3s ease;
+}
+
+.system-performance-rate-grid
+  article.danger
+  .system-performance-track
+  > span {
+  background: linear-gradient(
+    90deg,
+    #df6a6a,
+    #c94b4b
+  );
+}
+
+/* =========================================
+   GENERAL REPORT CARDS
+========================================= */
+
+.system-reports-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.system-report-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.system-report-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.system-report-card-heading h3 {
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.system-report-card-heading p {
+  margin: 6px 0 0;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.system-report-card-heading > span {
+  flex-shrink: 0;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background-color: var(--color-background);
+  color: var(--color-deep-teal);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* =========================================
+   MONTHLY RECRUITMENT TREND
+========================================= */
+
+.system-monthly-trend-card {
+  margin-top: 22px;
+}
+
+.system-monthly-trend-chart {
+  min-height: 310px;
+  display: grid;
+  grid-template-columns:
+    repeat(6, minmax(90px, 1fr));
+  align-items: end;
+  gap: 18px;
+  padding: 30px 24px 12px;
+  overflow-x: auto;
+}
+
+.system-monthly-trend-chart > article {
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.system-monthly-bars {
+  width: 100%;
+  height: 215px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 8px;
+}
+
+.system-monthly-bar {
+  position: relative;
+  width: 22px;
+  min-height: 0;
+  border-radius: 7px 7px 2px 2px;
+  transition:
+    height 0.3s ease,
+    transform 0.2s ease;
+}
+
+.system-monthly-bar:hover {
+  transform: translateY(-3px);
+}
+
+.system-monthly-bar span {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  color: var(--color-muted);
+  font-size: 10px;
+  font-weight: 800;
+  transform: translateX(-50%);
+}
+
+.system-monthly-bar.applications {
+  background: linear-gradient(
+    180deg,
+    var(--color-primary),
+    var(--color-deep-teal)
+  );
+}
+
+.system-monthly-bar.selected {
+  background: linear-gradient(
+    180deg,
+    #36b975,
+    #15803d
+  );
+}
+
+.system-monthly-bar.rejected {
+  background: linear-gradient(
+    180deg,
+    #eb7777,
+    #c94b4b
+  );
+}
+
+.system-monthly-trend-chart > article > strong {
+  margin-top: 13px;
+  color: var(--color-dark);
+  font-size: 11px;
+  text-align: center;
+}
+
+.system-monthly-trend-chart > article > small {
+  margin-top: 5px;
+  color: var(--color-muted);
+  font-size: 9px;
+  text-align: center;
+}
+
+.system-monthly-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  padding: 17px 24px 22px;
+  border-top: 1px solid var(--color-border);
+}
+
+.system-monthly-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--color-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.system-monthly-legend i {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+}
+
+.system-monthly-legend i.applications {
+  background-color: var(--color-primary);
+}
+
+.system-monthly-legend i.selected {
+  background-color: #15803d;
+}
+
+.system-monthly-legend i.rejected {
+  background-color: #c94b4b;
+}
+
+/* =========================================
+   RECRUITMENT OUTCOMES
+========================================= */
+
+.system-outcome-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  padding: 22px;
+}
+
+.system-outcome-grid article {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 17px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+}
+
+.system-outcome-grid span,
+.system-outcome-grid strong {
+  display: block;
+}
+
+.system-outcome-grid span {
+  color: var(--color-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.system-outcome-grid strong {
+  margin-top: 8px;
+  color: var(--color-dark);
+  font-size: 25px;
+}
+
+/* =========================================
+   JOB STATUS DISTRIBUTION
+========================================= */
+
+.system-job-status-list {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+}
+
+.system-job-status-list article {
+  display: grid;
+  gap: 10px;
+}
+
+.system-job-status-list
+  article
+  > div:first-child {
+  display: grid;
+  grid-template-columns:
+    12px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.system-job-status-list strong {
+  color: var(--color-dark);
+  font-size: 13px;
+}
+
+.system-job-status-list small {
+  color: var(--color-muted);
+  font-size: 11px;
+}
+
+.system-job-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.system-job-status-dot.open {
+  background-color: #15803d;
+}
+
+.system-job-status-dot.closed {
+  background-color: #dc2626;
+}
+
+.system-job-status-dot.expired {
+  background-color: #b45309;
+}
+
+.system-job-status-dot.draft {
+  background-color: #6b7280;
+}
+
+.system-job-status-dot.other,
+.system-job-status-dot.unknown {
+  background-color: var(--color-primary);
+}
+
+.system-job-status-track {
+  height: 9px;
+  overflow: hidden;
+  border-radius: 999px;
+  background-color: var(--color-background);
+}
+
+.system-job-status-track > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+}
+
+.system-job-status-track > span.open {
+  background: linear-gradient(
+    90deg,
+    #36b975,
+    #15803d
+  );
+}
+
+.system-job-status-track > span.closed {
+  background: linear-gradient(
+    90deg,
+    #ef7a7a,
+    #dc2626
+  );
+}
+
+.system-job-status-track > span.expired {
+  background: linear-gradient(
+    90deg,
+    #f0b853,
+    #b45309
+  );
+}
+
+.system-job-status-track > span.draft {
+  background: linear-gradient(
+    90deg,
+    #9ca3af,
+    #6b7280
+  );
+}
+
+/* =========================================
+   RECRUITER PERFORMANCE
+========================================= */
+
+.system-recruiter-performance-card {
+  margin-top: 22px;
+}
+
+.system-recruiter-performance-list {
+  display: grid;
+}
+
+.system-recruiter-performance-list > article {
+  display: grid;
+  grid-template-columns:
+    46px minmax(0, 1fr);
+  gap: 15px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.system-recruiter-performance-list > article:last-child {
+  border-bottom: none;
+}
+
+.system-recruiter-rank {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--color-deep-teal);
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.system-recruiter-information {
+  min-width: 0;
+}
+
+.system-recruiter-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.system-recruiter-heading > div {
+  min-width: 0;
+}
+
+.system-recruiter-heading strong,
+.system-recruiter-heading span {
+  display: block;
+}
+
+.system-recruiter-heading strong {
+  overflow: hidden;
+  color: var(--color-dark);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.system-recruiter-heading > div > span {
+  margin-top: 4px;
+  overflow: hidden;
+  color: var(--color-muted);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.system-recruiter-statistics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 13px;
+}
+
+.system-recruiter-statistics span {
+  color: var(--color-muted);
+  font-size: 11px;
+}
+
+.system-recruiter-progress {
+  height: 8px;
+  margin-top: 13px;
+  overflow: hidden;
+  border-radius: 999px;
+  background-color: var(--color-background);
+}
+
+.system-recruiter-progress > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+}
+
+/* =========================================
+   USER ROLE REPORT
+========================================= */
+
+.system-role-report-list {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+}
+
+.system-role-report-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.system-role-report-heading strong,
+.system-role-report-heading span {
+  display: block;
+}
+
+.system-role-report-heading strong {
+  color: var(--color-dark);
+}
+
+.system-role-report-heading span {
+  margin-top: 4px;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.system-role-report-heading > strong {
+  color: var(--color-primary);
+  font-size: 14px;
+}
+
+.system-role-progress {
+  height: 9px;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background-color: var(--color-background);
+}
+
+.system-role-progress span {
+  display: block;
+  min-width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  transition: width 0.3s ease;
+}
+
+/* =========================================
+   ACCOUNT STATUS REPORT
+========================================= */
+
+.system-status-report {
+  display: grid;
+  gap: 15px;
+  padding: 22px;
+}
+
+.system-status-report > article {
+  display: grid;
+  grid-template-columns:
+    54px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  padding: 15px;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+}
+
+.system-status-circle {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.system-status-circle.active {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.system-status-circle.inactive {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.system-status-circle.pending {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+
+.system-status-report strong {
+  color: var(--color-dark);
+}
+
+.system-status-report p {
+  margin: 5px 0 0;
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.system-recent-users-card {
+  margin-top: 22px;
+  overflow: hidden;
+}
+
+.system-reports-table-wrapper {
+  overflow-x: auto;
+}
+
+.system-reports-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.system-reports-table th,
+.system-reports-table td {
+  padding: 15px 18px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.system-reports-table th {
+  background-color: var(--color-background);
+  color: var(--color-muted);
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.system-reports-table td {
+  color: var(--color-text);
+}
+
+.system-reports-table tbody tr:hover {
+  background-color: rgba(26, 153, 143, 0.03);
+}
+
+.system-report-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.system-report-avatar {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-deep-teal);
+  color: var(--color-white);
+  font-weight: 800;
+}
+
+.system-report-user strong,
+.system-report-user span {
+  display: block;
+}
+
+.system-report-user strong {
+  color: var(--color-dark);
+}
+
+.system-report-user span {
+  margin-top: 4px;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.system-report-status {
+  display: inline-flex;
+  padding: 6px 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.system-report-status.active {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.system-report-status.inactive {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+/* =========================================
+   EMPTY AND LOADING STATES
+========================================= */
+
+.system-reports-empty,
+.system-reports-state {
+  padding: 45px 24px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.system-reports-state {
+  border: 1px dashed var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+}
+
+.system-reports-state h2 {
+  margin-top: 0;
+  color: var(--color-dark);
+}
+
+.system-reports-state p {
+  margin-bottom: 0;
+}
+
+.system-report-generated-time {
+  margin: 20px 0 0;
+  color: var(--color-muted);
+  font-size: 12px;
+  text-align: right;
+}
+
+/* =========================================
+   RESPONSIVE — LARGE TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .system-reports-summary,
+  .system-performance-rate-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .system-monthly-trend-chart {
+    grid-template-columns:
+      repeat(6, minmax(110px, 1fr));
+  }
+}
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .system-reports-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .system-reports-heading {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 24px 20px;
+  }
+
+  .system-reports-heading h2 {
+    font-size: 26px;
+  }
+
+  .system-reports-heading-actions {
+    align-self: stretch;
+  }
+
+  .system-reports-heading-actions button {
+    flex: 1;
+  }
+
+  .system-report-card-heading,
+  .system-recruiter-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .system-monthly-trend-chart {
+    justify-content: flex-start;
+  }
+
+  .system-monthly-bars {
+    height: 185px;
+  }
+
+  .system-recruiter-performance-list > article {
+    grid-template-columns: 1fr;
+  }
+
+  .system-recruiter-rank {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE — SMALL MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+  .system-reports-summary,
+  .system-performance-rate-grid,
+  .system-outcome-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .system-reports-heading-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .system-reports-heading-actions button {
+    width: 100%;
+  }
+
+  .system-report-card-heading,
+  .system-role-report-list,
+  .system-status-report,
+  .system-job-status-list {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+
+  .system-performance-rate-grid article,
+  .system-reports-summary article {
+    padding: 17px;
+  }
+
+  .system-job-status-list
+    article
+    > div:first-child {
+    grid-template-columns:
+      12px minmax(0, 1fr);
+  }
+
+  .system-job-status-list small {
+    grid-column: 2;
+  }
+}
+
+/* =========================================
+   PRINT
+========================================= */
+
+@media print {
+  .admin-sidebar,
+  .admin-topbar,
+  .system-reports-heading-actions,
+  .portal-footer {
+    display: none !important;
+  }
+
+  .admin-main-area {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .admin-content {
+    padding: 0 !important;
+  }
+
+  .system-reports-heading {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .system-reports-heading h2,
+  .system-reports-heading p,
+  .system-reports-heading span {
+    color: #000000 !important;
+  }
+
+  .system-reports-heading,
+  .system-report-card,
+  .system-reports-summary article,
+  .system-performance-rate-grid article {
+    box-shadow: none !important;
+  }
+
+  .system-monthly-trend-chart,
+  .system-reports-table-wrapper {
+    overflow: visible;
+  }
+
+  .system-report-card,
+  .system-reports-summary article,
+  .system-performance-rate-grid article {
+    break-inside: avoid;
+  }
+}

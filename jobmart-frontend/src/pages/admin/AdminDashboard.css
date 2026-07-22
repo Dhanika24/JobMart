@@ -1,0 +1,301 @@
+.admin-dashboard {
+  width: 100%;
+}
+
+.admin-dashboard-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 30px;
+  border-radius: var(--border-radius-large);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-deep-teal)
+  );
+  color: var(--color-white);
+  box-shadow: var(--shadow-medium);
+}
+
+.admin-dashboard-hero > div > span {
+  color: var(--color-light);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.admin-dashboard-hero h2 {
+  margin: 8px 0;
+  font-size: 30px;
+}
+
+.admin-dashboard-hero p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.admin-dashboard-hero button {
+  flex-shrink: 0;
+  padding: 12px 18px;
+  border: none;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+  color: var(--color-deep-teal);
+  font-weight: 800;
+}
+
+.admin-dashboard-message {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: var(--border-radius-small);
+  font-weight: 700;
+}
+
+.admin-dashboard-message.success {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.admin-dashboard-message.error {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.admin-dashboard-summary,
+.admin-role-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.admin-role-summary {
+  margin-top: 16px;
+}
+
+.admin-dashboard-summary article,
+.admin-role-summary article {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.admin-dashboard-summary span,
+.admin-dashboard-summary strong,
+.admin-role-summary span,
+.admin-role-summary strong {
+  display: block;
+}
+
+.admin-dashboard-summary span,
+.admin-role-summary span {
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-dashboard-summary strong,
+.admin-role-summary strong {
+  margin-top: 8px;
+  color: var(--color-dark);
+  font-size: 28px;
+}
+
+.admin-dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.admin-dashboard-actions button {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  text-align: left;
+  box-shadow: var(--shadow-small);
+}
+
+.admin-dashboard-actions strong,
+.admin-dashboard-actions span {
+  display: block;
+}
+
+.admin-dashboard-actions strong {
+  color: var(--color-dark);
+  font-size: 15px;
+}
+
+.admin-dashboard-actions span {
+  margin-top: 7px;
+  color: var(--color-muted);
+  line-height: 1.45;
+}
+
+.admin-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.admin-dashboard-card {
+  padding: 23px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-small);
+}
+
+.admin-dashboard-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.admin-dashboard-card-heading h3 {
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.admin-dashboard-card-heading p {
+  margin: 6px 0 0;
+  color: var(--color-muted);
+}
+
+.admin-dashboard-card-heading button {
+  padding: 9px 12px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.admin-pending-list,
+.admin-recent-user-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.admin-pending-list article,
+.admin-recent-user-list article {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-background);
+}
+
+.admin-user-avatar {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-deep-teal);
+  color: var(--color-white);
+  font-weight: 800;
+}
+
+.admin-pending-list h4,
+.admin-recent-user-list h4 {
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.admin-pending-list p,
+.admin-recent-user-list p {
+  margin: 4px 0;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.admin-pending-list small,
+.admin-recent-user-list small {
+  color: var(--color-muted);
+}
+
+.admin-pending-list button {
+  padding: 8px 11px;
+  border: none;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 800;
+}
+
+.admin-account-status {
+  padding: 6px 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.admin-account-status.active {
+  background-color: #ecfdf5;
+  color: #15803d;
+}
+
+.admin-account-status.inactive {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.admin-dashboard-empty,
+.admin-dashboard-state {
+  padding: 35px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.admin-dashboard-state {
+  border: 1px dashed var(--color-border);
+  border-radius: var(--border-radius-medium);
+  background-color: var(--color-white);
+}
+
+.admin-dashboard-state h2 {
+  color: var(--color-dark);
+}
+
+@media (max-width: 1150px) {
+  .admin-dashboard-actions,
+  .admin-dashboard-summary,
+  .admin-role-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .admin-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard-hero {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-dashboard-hero button {
+    align-self: flex-start;
+  }
+
+  .admin-dashboard-actions,
+  .admin-dashboard-summary,
+  .admin-role-summary {
+    grid-template-columns: 1fr;
+  }
+}
