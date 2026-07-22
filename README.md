@@ -1,113 +1,128 @@
-# JobMart
+# 💼 JobMart
 
-JobMart is a full-stack recruitment management system built using React, ASP.NET Core Web API, SQL Server, and Entity Framework Core.
+> **Smart Recruitment. Better Connections. Faster Hiring.**
 
-The platform provides separate portals for Candidates, Recruiters, Hiring Managers, and Administrators. It supports secure authentication, job management, applications, AI-based candidate ranking, CV parsing, interview scheduling, candidate evaluation, notifications, monitoring, audit logging, and recruitment analytics.
+JobMart is a full-stack recruitment management system developed using **React**, **ASP.NET Core Web API**, **SQL Server**, and **Entity Framework Core**.
 
----
-
-## Main Features
-
-### Candidate Portal
-
-- Candidate registration and login
-- Candidate profile management
-- CV and document uploading
-- Automatic CV parsing and skill extraction
-- Browse and search job postings
-- Apply for jobs
-- View application status
-- AI-based job recommendations
-- Interview and notification tracking
-
-### Recruiter Portal
-
-- Recruiter dashboard
-- Create, edit, and delete job postings
-- View job applications
-- Search and filter candidates
-- AI-based candidate ranking
-- Shortlist or reject candidates
-- Schedule interviews
-- Send candidate notifications
-- View recruitment analytics
-
-### Hiring Manager Portal
-
-- View shortlisted candidates
-- View candidate profiles and CV details
-- Review scheduled interviews
-- Add candidate evaluations
-- Record interview feedback
-- Give technical and communication scores
-- Make final hiring decisions
-
-### Administrator Portal
-
-- Manage user accounts
-- Approve recruiter registrations
-- Activate or deactivate users
-- Manage organizations and departments
-- Assign recruiters and hiring managers
-- View audit logs
-- Monitor API and system status
-- View recruitment reports and analytics
+The platform provides dedicated portals for **Candidates**, **Recruiters**, **Hiring Managers**, and **Administrators**. It supports secure authentication, job management, applications, AI-powered candidate ranking, CV parsing, interview scheduling, candidate evaluations, notifications, system monitoring, audit logging, and recruitment analytics.
 
 ---
 
-## Technologies Used
+## ✨ Main Features
 
-### Frontend
+### 👨‍💻 Candidate Portal
 
-- React
-- Vite
-- JavaScript
-- CSS
-- Axios
-- React Router
-- Lucide React
+- 🔐 Candidate registration and secure login
+- 👤 Candidate profile management
+- 📄 CV and document uploading
+- 🤖 Automatic CV parsing and skill extraction
+- 🔎 Browse and search job postings
+- 📩 Apply for available jobs
+- 📊 Track application status
+- 🎯 AI-based job recommendations
+- 📅 View interviews and notifications
 
-### Backend
+### 🧑‍💼 Recruiter Portal
 
-- ASP.NET Core Web API
-- C#
-- Entity Framework Core
-- JWT Authentication
-- BCrypt password hashing
+- 📈 Interactive recruiter dashboard
+- ➕ Create, edit, and delete job postings
+- 📂 View submitted job applications
+- 🔍 Search and filter candidates
+- 🤖 AI-powered candidate ranking
+- ✅ Shortlist or reject candidates
+- 📅 Schedule candidate interviews
+- 🔔 Send candidate notifications
+- 📊 View recruitment analytics
 
-### Database
+### 👔 Hiring Manager Portal
 
-- Microsoft SQL Server
-- SQL Server Management Studio
-- Entity Framework Core Migrations
+- ⭐ View shortlisted candidates
+- 📄 Review candidate profiles and CV details
+- 📆 View scheduled interviews
+- 📝 Add candidate evaluations
+- 💬 Record interview feedback
+- 📊 Provide technical and communication scores
+- 🏆 Make final hiring decisions
+
+### 🛡️ Administrator Portal
+
+- 👥 Manage user accounts
+- ✅ Approve recruiter registrations
+- 🔄 Activate or deactivate users
+- 🏢 Manage organizations and departments
+- 👨‍💼 Assign recruiters and hiring managers
+- 📜 View system audit logs
+- 🖥️ Monitor API and system health
+- 📊 View recruitment reports and analytics
 
 ---
 
-## Project Structure
+## 🛠️ Technologies Used
+
+### 🎨 Frontend
+
+- ⚛️ React
+- ⚡ Vite
+- 🟨 JavaScript
+- 🎨 CSS
+- 🔗 Axios
+- 🧭 React Router
+- ✨ Lucide React
+
+### ⚙️ Backend
+
+- 🟣 ASP.NET Core Web API
+- 💻 C#
+- 🗃️ Entity Framework Core
+- 🔐 JWT Authentication
+- 🔒 BCrypt Password Hashing
+
+### 🗄️ Database
+
+- 🧱 Microsoft SQL Server
+- 🖥️ SQL Server Management Studio
+- 🔄 Entity Framework Core Migrations
+
+---
+
+## 📁 Project Structure
 
 ```text
 JobMart/
-├── jobmart/
-│   ├── Controllers/
-│   ├── Data/
-│   ├── DTOs/
-│   ├── Migrations/
-│   ├── Models/
-│   ├── Services/
+│
+├── jobmart-backend/             # ⚙️ ASP.NET Core backend
+│   ├── Controllers/             # API controllers
+│   ├── Data/                    # Database context and seed data
+│   ├── DTOs/                    # Data transfer objects
+│   ├── Interfaces/              # Service interfaces
+│   ├── Migrations/              # EF Core migrations
+│   ├── Models/                  # Database models
+│   ├── Services/                # Business logic and services
+│   ├── Properties/
 │   ├── Program.cs
+│   ├── appsettings.json
 │   └── jobmart.csproj
 │
-├── jobmart-frontend/
+├── jobmart-frontend/            # 🎨 React frontend
 │   ├── public/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── layouts/
+│   │   ├── api/                 # Axios configuration
+│   │   ├── assets/              # Images and icons
+│   │   ├── components/          # Reusable components
+│   │   ├── layouts/             # Portal layouts
 │   │   ├── pages/
-│   │   ├── services/
-│   │   ├── styles/
+│   │   │   ├── admin/           # Administrator pages
+│   │   │   ├── auth/            # Login and registration
+│   │   │   ├── candidate/       # Candidate pages
+│   │   │   ├── manager/         # Hiring Manager pages
+│   │   │   ├── public/          # Landing page
+│   │   │   └── recruiter/       # Recruiter pages
 │   │   ├── App.jsx
+│   │   ├── App.css
+│   │   ├── index.css
 │   │   └── main.jsx
 │   ├── package.json
+│   ├── package-lock.json
 │   └── vite.config.js
 │
 ├── .gitignore
